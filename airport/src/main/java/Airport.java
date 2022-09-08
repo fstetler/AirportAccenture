@@ -17,9 +17,9 @@ public class Airport {
 
     /**
      * Creates a list of the top ten countries that appear most times in the original list, going from highest to lowest
-     * @param countryList
-     * @param numberOfCountriesInList
-     * @return
+     * @param countryList list of countries
+     * @param numberOfCountriesInList number of how many times a certain country shows in the list
+     * @return List of top ten airports with most runways
      */
     private static List<String> setTopTenCountriesWithAirports(List<String> countryList, List<Integer> numberOfCountriesInList) {
         List<String> topTenCountriesWithAirports = new ArrayList<>();
@@ -34,9 +34,9 @@ public class Airport {
 
     /**
      * Creates a list of integers where each Integer represents how many times that country appears in the original airport list
-     * @param countryList
-     * @param airports
-     * @return
+     * @param countryList list of countries
+     * @param airports List of list of airports
+     * @return Number of times that a certain country shows up in countryList
      */
     private static List<Integer> setNumberOfCountriesInList(List<String> countryList, List<List<String>> airports) {
         List<Integer> numberOfCountriesInList = new ArrayList<>();
@@ -54,8 +54,8 @@ public class Airport {
 
     /**
      * Creates a list of all the unique countries in airports csv
-     * @param airports
-     * @return
+     * @param airports List of list of airports
+     * @return List of countries with airports
      */
     private static List<String> setListofCountries(List<List<String>> airports) {
         List<String> countryList = new ArrayList<>();
@@ -69,8 +69,8 @@ public class Airport {
 
     /**
      * Scans the csv file and returns its content as a List of Lists
-     * @param filePath
-     * @return
+     * @param filePath path to file
+     * @return list in file
      * @throws FileNotFoundException
      */
     private static List<List<String>> scanAndReturnCvsfile(String filePath) throws FileNotFoundException {
