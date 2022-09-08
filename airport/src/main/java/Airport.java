@@ -12,7 +12,11 @@ public class Airport {
         List<String> countryList = setListofCountries(airports);
         List<Integer> numberOfCountriesInList = setNumberOfCountriesInList(countryList, airports);
         List<String> topTenCountriesWithAirports = setTopTenCountriesWithAirports(countryList, numberOfCountriesInList);
-        System.out.println(topTenCountriesWithAirports);
+        System.out.println("The top countries with the most amount of airports are: ");
+        for (int i = 0; i < topTenCountriesWithAirports.size() - 1; i++) {
+            System.out.print(topTenCountriesWithAirports.get(i) + ", ");
+        }
+        System.out.print(topTenCountriesWithAirports.get(topTenCountriesWithAirports.size()-1));
     }
 
     /**
